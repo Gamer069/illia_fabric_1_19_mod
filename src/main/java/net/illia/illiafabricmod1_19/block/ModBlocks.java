@@ -3,6 +3,7 @@ package net.illia.illiafabricmod1_19.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.illia.illiafabricmod1_19.IlliaFabricMod1_19;
+import net.illia.illiafabricmod1_19.block.custom.IlliaAdvancedBlock;
 import net.illia.illiafabricmod1_19.item.ModItemGroup;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
@@ -23,6 +24,8 @@ public class ModBlocks {
 	public static final Block DEEPSLATE_RUBY_ORE = registerBlock("deepslate_ruby_ore",
 		new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1f).requiresTool(),
 			UniformIntProvider.create(7, 9)), ModItemGroup.RUBY);
+	public static final Block ILLIA_ADVANCED_BLOCK = registerBlock("illia_advanced_block",
+		new IlliaAdvancedBlock(FabricBlockSettings.of(Material.STONE).strength(1f)), ModItemGroup.RUBY);
 
 public static Block registerBlock(String name, Block block, ItemGroup itemGroup) {
 	registerBlockItem(name, block, itemGroup);
