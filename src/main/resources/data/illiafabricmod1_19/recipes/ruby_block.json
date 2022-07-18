@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"###",
+		"###",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "illiafabricmod1_19:ruby"
+		}
+	},
+	"result": {
+		"item": "illiafabricmod1_19:ruby_block"
+	}
+}

@@ -1,7 +1,10 @@
 package net.illia.illiafabricmod1_19;
 
 import net.fabricmc.api.ModInitializer;
+import net.illia.illiafabricmod1_19.block.ModBlocks;
 import net.illia.illiafabricmod1_19.item.ModItems;
+import net.illia.illiafabricmod1_19.world.feature.ModConfiguredFeatures;
+import net.illia.illiafabricmod1_19.world.gen.ModOreGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +15,12 @@ public class IlliaFabricMod1_19 implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModConfiguredFeatures.registerConfiguredFeatures();
+
 		ModItems.registerModItems();
+
+		ModBlocks.registerModBlocks();
+
+		ModOreGeneration.generateOres();
 	}
 }

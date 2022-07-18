@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "illiafabricmod1_19:block/ruby_ore"
+	}
+}
