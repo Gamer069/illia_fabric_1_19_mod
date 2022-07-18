@@ -1,6 +1,7 @@
 package net.illia.illiafabricmod1_19;
 
 import net.fabricmc.api.ModInitializer;
+import net.illia.illiafabricmod1_19.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +12,6 @@ public class IlliaFabricMod1_19 implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItems.registerModItems();
 	}
 }
