@@ -7,5 +7,7 @@
 	"block.illiafabricmod1_19.deepslate_ruby_ore": "Deepslate Ruby Ore",
 	"block.illiafabricmod1_19.illia_advanced_block": "Illia's Advanced Block, DO NOT RIGHT CLICK IT WHEN ITS PLACED",
 
-	"itemGroup.illiafabricmod1_19.ruby": "RIT (Ruby Illia Tab)"
+	"itemGroup.illiafabricmod1_19.ruby": "RIT (Ruby Illia Tab)",
+	"key.category.illiafabricmod_1_19.illia_mod": "Testing",
+	"key.illiafabricmod_1_19.illia_keybind": "Illia's Test Key"
 }
