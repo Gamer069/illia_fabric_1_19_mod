@@ -2,8 +2,12 @@ package net.illia.illiafabricmod1_19.event;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.illia.illiafabricmod1_19.networking.ModMessages;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.network.PacketByteBuf;
 import org.lwjgl.glfw.GLFW;
 
 public class KeyInputHandler {
@@ -14,7 +18,7 @@ public class KeyInputHandler {
 	public static void registerKeyInputs() {
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			if (illiaKeybind.wasPressed()) {
-				client.player.sendChatMessage("TEST IS A TEST, WHY DID YOU TESTED THIS TEST?");
+				ClientPlayNetworking.send(ModMessages.DRINKING_ID, PacketByteBufs.create());
 			}
 		});
 	}

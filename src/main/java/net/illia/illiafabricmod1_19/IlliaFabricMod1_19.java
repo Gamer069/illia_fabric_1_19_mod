@@ -3,6 +3,7 @@ package net.illia.illiafabricmod1_19;
 import net.fabricmc.api.ModInitializer;
 import net.illia.illiafabricmod1_19.block.ModBlocks;
 import net.illia.illiafabricmod1_19.item.ModItems;
+import net.illia.illiafabricmod1_19.networking.ModMessages;
 import net.illia.illiafabricmod1_19.util.ModLootTableModifiers;
 import net.illia.illiafabricmod1_19.world.feature.ModConfiguredFeatures;
 import net.illia.illiafabricmod1_19.world.gen.ModOreGeneration;
@@ -25,5 +26,7 @@ public class IlliaFabricMod1_19 implements ModInitializer {
 		ModOreGeneration.generateOres();
 
 		ModLootTableModifiers.modifyLootTables();
+
+		ModMessages.registerC2SPackets();
 	}
 }

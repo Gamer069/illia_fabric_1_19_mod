@@ -9,5 +9,8 @@
 
 	"itemGroup.illiafabricmod1_19.ruby": "RIT (Ruby Illia Tab)",
 	"key.category.illiafabricmod_1_19.illia_mod": "Testing",
-	"key.illiafabricmod_1_19.illia_keybind": "Illia's Test Key"
+	"key.illiafabricmod_1_19.illia_keybind": "Illia's Test Key",
+
+	"message.illiafabricmod_1_19.drank_water": "Did You Drink That Water?",
+	"message.illiafabricmod_1_19.error": "FATAL ERROR"
 }
