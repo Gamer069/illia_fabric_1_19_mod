@@ -5,7 +5,17 @@
 	"block.illiafabricmod1_19.ruby_block": "Block Of Ruby",
 	"block.illiafabricmod1_19.ruby_ore": "Ruby Ore",
 	"block.illiafabricmod1_19.deepslate_ruby_ore": "Deepslate Ruby Ore",
-	"block.illiafabricmod1_19.illia_advanced_block": "Illia's Advanced Block, DO NOT RIGHT CLICK IT WHEN ITS PLACED",
+	"block.illiafabricmod1_19.illia_advanced_block": "Illia's Advanced Block",
+	"block.illiafabricmod1_19.melted_ruby_block": "Melted Ruby Block",
+	"block.illiafabricmod1_19.still_melted_ruby": "Still Melted Ruby",
+	"block.illiafabricmod1_19.flowing_melted_ruby": "Flowing Melted Ruby",
+
+	"item.illiafabricmod1_19.melted_ruby_bucket": "Melted Ruby Bucket",
+
+	"fluid.illiafabricmod1_19.still_melted_ruby": "Still Melted Ruby",
+
+	"fluid.illiafabricmod1_19.flowing_melted_ruby": "Flowing Melted Ruby",
+
 
 	"itemGroup.illiafabricmod1_19.ruby": "RIT (Ruby Illia Tab)",
 	"key.category.illiafabricmod_1_19.illia_mod": "Testing",

@@ -29,9 +29,9 @@ public class IlliaAdvancedBlock extends Block {
 		return super.onUse(blockState, world, blockPos, playerEntity, hand, hitResult);
 	}
 	@Override
-	public void onSteppedOn(World YourMinecraftWorld, BlockPos blockPos, BlockState blockState, Entity entity) {
-		if (entity instanceof LivingEntity entity1) {
-			entity1.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 4));
+	public void onSteppedOn(World YourMinecraftWorld, BlockPos blockPos, BlockState blockState, Entity MinecraftEntityThatIsExtremelyNormal) {
+		if (MinecraftEntityThatIsExtremelyNormal instanceof LivingEntity MinecraftLivingEntityThatIsLivingCosItIsLivingAkaSmileyFace) {
+			MinecraftLivingEntityThatIsLivingCosItIsLivingAkaSmileyFace.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 4));
 		}
 	}
 }

@@ -4,6 +4,7 @@
   "package": "net.illia.illiafabricmod1_19.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+	  "ModEntityDataSaverMixin"
   ],
   "client": [
 	  "ExampleMixin"

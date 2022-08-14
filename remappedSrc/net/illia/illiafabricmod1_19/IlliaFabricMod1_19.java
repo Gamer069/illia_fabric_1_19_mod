@@ -4,7 +4,6 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.illia.illiafabricmod1_19.block.ModBlocks;
 import net.illia.illiafabricmod1_19.event.PlayerTickHandler;
-import net.illia.illiafabricmod1_19.fluid.ModFluids;
 import net.illia.illiafabricmod1_19.item.ModItems;
 import net.illia.illiafabricmod1_19.networking.ModMessages;
 import net.illia.illiafabricmod1_19.util.ModLootTableModifiers;
@@ -31,8 +30,6 @@ public class IlliaFabricMod1_19 implements ModInitializer {
 		ModLootTableModifiers.modifyLootTables();
 
 		ModMessages.registerC2SPackets();
-
-		ModFluids.register();
 
 		ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
 	}
