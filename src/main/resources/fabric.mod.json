@@ -23,6 +23,9 @@
     ],
 	  "client": [
 		  "net.illia.illiafabricmod1_19.IlliaFabricMod1_19Client"
+	  ],
+	  "server": [
+		  "net.illia.illiafabricmod1_19.IlliaFabricMod1_19Server"
 	  ]
   },
   "mixins": [
