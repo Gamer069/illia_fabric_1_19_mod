@@ -9,6 +9,7 @@
 	"block.illiafabricmod1_19.melted_ruby_block": "Melted Ruby Block",
 	"block.illiafabricmod1_19.still_melted_ruby": "Still Melted Ruby",
 	"block.illiafabricmod1_19.flowing_melted_ruby": "Flowing Melted Ruby",
+	"block.illiafabricmod1_19.diamond_crafting_table": "Diamond Crafting Table",
 
 	"item.illiafabricmod1_19.melted_ruby_bucket": "Melted Ruby Bucket",
 
@@ -22,5 +23,7 @@
 	"key.illiafabricmod_1_19.illia_keybind": "Illia's Test Key",
 
 	"message.illiafabricmod_1_19.drank_water": "Did You Drink That Water?",
-	"message.illiafabricmod_1_19.error": "FATAL ERROR"
+	"message.illiafabricmod_1_19.error": "FATAL ERROR",
+
+	"container.diamond_crafting": "Diamond Crafting"
 }

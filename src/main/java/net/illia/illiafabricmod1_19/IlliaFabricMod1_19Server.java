@@ -1,6 +1,8 @@
 package net.illia.illiafabricmod1_19;
 
 import net.fabricmc.api.DedicatedServerModInitializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.illia.illiafabricmod1_19.event.PlayerTickHandler;
 import org.slf4j.Logger;
 
 public class IlliaFabricMod1_19Server implements DedicatedServerModInitializer {
@@ -14,6 +16,7 @@ public class IlliaFabricMod1_19Server implements DedicatedServerModInitializer {
 		System.out.println("The Server Has Initialized");
 		logger.warn("THE SERVER IS READY");
 		failedInitializing = false;
+		ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
 	}
 
 	public static void onFailInitialize() {

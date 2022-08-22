@@ -11,6 +11,9 @@ import net.illia.illiafabricmod1_19.client.ThirstHudOverlay;
 import net.illia.illiafabricmod1_19.event.KeyInputHandler;
 import net.illia.illiafabricmod1_19.fluid.ModFluids;
 import net.illia.illiafabricmod1_19.networking.ModMessages;
+import net.illia.illiafabricmod1_19.screen.DiamondCraftingTableScreen;
+import net.illia.illiafabricmod1_19.screen.ModScreenHandlers;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 
@@ -24,5 +27,6 @@ public class IlliaFabricMod1_19Client implements ClientModInitializer {
 		HudRenderCallback.EVENT.register(new ThirstHudOverlay());
 		FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_MELTED_RUBY_FLUID, ModFluids.FLOWING_MELTED_RUBY_FLUID, new SimpleFluidRenderHandler(new Identifier("minecraft:block/water_still"), new Identifier("minecraft:block/water_flow"), 0xA1E038D0));
 		BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_MELTED_RUBY_FLUID, ModFluids.FLOWING_MELTED_RUBY_FLUID);
+		HandledScreens.register(ModScreenHandlers.DIAMOND_CRAFTING_TABLE_SCREEN_HANDLER, DiamondCraftingTableScreen::new);
 	}
 }
