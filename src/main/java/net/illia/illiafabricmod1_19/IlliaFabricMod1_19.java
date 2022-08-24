@@ -8,6 +8,7 @@ import net.illia.illiafabricmod1_19.event.PlayerTickHandler;
 import net.illia.illiafabricmod1_19.fluid.ModFluids;
 import net.illia.illiafabricmod1_19.item.ModItems;
 import net.illia.illiafabricmod1_19.networking.ModMessages;
+import net.illia.illiafabricmod1_19.recipe.ModRecipes;
 import net.illia.illiafabricmod1_19.screen.ModScreenHandlers;
 import net.illia.illiafabricmod1_19.util.ModLootTableModifiers;
 import net.illia.illiafabricmod1_19.world.feature.ModConfiguredFeatures;
@@ -42,5 +43,6 @@ public class IlliaFabricMod1_19 implements ModInitializer {
 
 		ModScreenHandlers.registerAllScreenHandlers();
 
+		ModRecipes.registerRecipes();
 	}
 }

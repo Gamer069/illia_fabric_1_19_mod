@@ -1,0 +1,31 @@
+{
+	"type": "illiafabricmod1_19:diamond_crafting",
+	"input1": {
+		"item": "minecraft:white_concrete"
+	},
+	"input2": {
+		"item": "minecraft:white_concrete"
+	},
+	"input3": {
+		"item": "minecraft:white_concrete"
+	},
+	"input4": {
+		"item": "minecraft:white_concrete"
+	},
+	"input5": {
+		"item": "minecraft:white_concrete"
+	},
+	"input6": {
+		"item": "minecraft:white_concrete"
+	},
+	"input7": {
+		"item": "minecraft:white_concrete"
+	},
+	"input8": {
+		"item": "minecraft:white_concrete"
+	},
+	"input9": {
+		"item": "minecraft:white_concrete"
+	},
+	"result": "illiafabricmod1_19:ruby"
+}

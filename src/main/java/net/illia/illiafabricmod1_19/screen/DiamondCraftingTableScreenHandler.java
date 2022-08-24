@@ -39,7 +39,6 @@ public class DiamondCraftingTableScreenHandler extends ScreenHandler {
 		this.input = new CraftingInventory(this, 3, 3);
 		this.result = new CraftingResultInventory();
 		this.player = playerInventory.player;
-
 		this.addSlot(new CraftingResultSlot(playerInventory.player, this.input, this.result, 0, 124, 35));
 
 		addPlayerInventory(playerInventory);
@@ -78,16 +77,16 @@ public class DiamondCraftingTableScreenHandler extends ScreenHandler {
 	}
 
 	private void addPlayerInventory(PlayerInventory inventory) {
-		for (int i = 0; i < 9; ++i) {
-			for (int l = 0; l < 9; ++l) {
-				this.addSlot(new Slot(inventory, l + i * 9 + 9, 8 + l * 18, 86 + i * 18));
+		for(int i = 0; i < 3; ++i) {
+			for(int j = 0; j < 9; ++j) {
+				this.addSlot(new Slot(inventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
 			}
 		}
 	}
 
 	private void addPlayerHotbar(PlayerInventory inventory) {
-		for (int i = 0; i < 9; ++i) {
-			this.addSlot(new Slot(inventory, i, 8 + i * 18, 144));
+		for(int i = 0; i < 9; ++i) {
+			this.addSlot(new Slot(inventory, i, 8 + i * 18, 142));
 		}
 	}
 
