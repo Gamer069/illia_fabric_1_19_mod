@@ -100,8 +100,7 @@ public class DiamondCraftingTableScreenHandler extends ScreenHandler {
 			}
 		}
 	}
-
-	protected static void updateResult(ScreenHandler handler, World world, PlayerEntity player, CraftingInventory craftingInventory, CraftingResultInventory resultInventory) {
+	public static void updateResult(ScreenHandler handler, World world, PlayerEntity player, CraftingInventory craftingInventory, CraftingResultInventory resultInventory) {
 		if (!world.isClient) {
 			ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity) player;
 			ItemStack itemStack = ItemStack.EMPTY;

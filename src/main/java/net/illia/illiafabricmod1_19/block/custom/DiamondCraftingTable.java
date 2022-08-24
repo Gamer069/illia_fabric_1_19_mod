@@ -1,6 +1,5 @@
 package net.illia.illiafabricmod1_19.block.custom;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.illia.illiafabricmod1_19.block.entity.DiamondCraftingTableBlockEntity;
 import net.illia.illiafabricmod1_19.block.entity.ModBlockEntities;
 import net.minecraft.block.BlockEntityProvider;
@@ -11,11 +10,6 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.screen.CraftingScreenHandler;
-import net.minecraft.screen.NamedScreenHandlerFactory;
-import net.minecraft.screen.ScreenHandlerContext;
-import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
-import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemScatterer;
@@ -25,7 +19,7 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class DiamondCraftingTable extends BlockWithEntity implements BlockEntityProvider {
-	private static final Text TITLE = Text.translatable("container.diamond_crafting");
+//	private static final Text TITLE = Text.translatable("container.diamond_crafting");
 	public DiamondCraftingTable(Settings settings) {
 		super(settings);
 	}
@@ -50,9 +44,9 @@ public class DiamondCraftingTable extends BlockWithEntity implements BlockEntity
 	@Override
 	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 		if (!world.isClient) {
-			NamedScreenHandlerFactory factory = state.createScreenHandlerFactory(world, pos);
-			if (factory != null) {
-				player.openHandledScreen(factory);
+			BlockEntity blockEntity = world.getBlockEntity(pos);
+			if (blockEntity instanceof DiamondCraftingTableBlockEntity diamondCraftingTableBlockEntity) {
+				player.openHandledScreen(diamondCraftingTableBlockEntity);
 			}
 		}
 		return ActionResult.SUCCESS;
@@ -68,13 +62,5 @@ public class DiamondCraftingTable extends BlockWithEntity implements BlockEntity
 	@Override
 	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
 		return checkType(type, ModBlockEntities.DIAMOND_CRAFTING_TABLE, DiamondCraftingTableBlockEntity::tick);
-	}
-
-	@Nullable
-	@Override
-	public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
-		return new SimpleNamedScreenHandlerFactory((syncId, inv, player) -> {
-			return new CraftingScreenHandler(syncId, inv, ScreenHandlerContext.create(world, pos));
-		}, TITLE);
 	}
 }
