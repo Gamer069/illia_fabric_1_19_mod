@@ -20,9 +20,9 @@ import java.util.Optional;
 
 public class DiamondCraftingTableScreenHandler extends ScreenHandler {
 	private final Inventory inventory;
-	private final PropertyDelegate delegate;
 	private final CraftingInventory input;
 	private final CraftingResultInventory result;
+	private final PropertyDelegate delegate;
 	private final PlayerEntity player;
 
 
@@ -117,5 +117,10 @@ public class DiamondCraftingTableScreenHandler extends ScreenHandler {
 			handler.setPreviousTrackedSlot(0, itemStack);
 			serverPlayerEntity.networkHandler.sendPacket(new ScreenHandlerSlotUpdateS2CPacket(handler.syncId, handler.nextRevision(), 0, itemStack));
 		}
+	}
+
+	@Override
+	public ScreenHandlerType<?> getType() {
+		return ModScreenHandlers.DIAMOND_CRAFTING_TABLE_SCREEN_HANDLER;
 	}
 }

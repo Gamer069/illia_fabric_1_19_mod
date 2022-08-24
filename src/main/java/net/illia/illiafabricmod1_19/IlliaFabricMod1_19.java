@@ -41,5 +41,6 @@ public class IlliaFabricMod1_19 implements ModInitializer {
 		ModBlockEntities.registerBlockEntities();
 
 		ModScreenHandlers.registerAllScreenHandlers();
+
 	}
 }
