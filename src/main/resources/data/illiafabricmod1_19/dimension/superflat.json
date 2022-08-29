@@ -1,0 +1,42 @@
+{
+	"type": "illiafabricmod1_19:superflat",
+	"generator": {
+		"type": "minecraft:flat",
+		"settings": {
+			"biome": "minecraft:plains",
+			"lakes": true,
+			"features": true,
+			"layers": [
+				{
+					"block": "minecraft:bedrock",
+					"height": 1
+				},
+				{
+					"block": "minecraft:dirt",
+					"height": 2
+				},
+				{
+					"block": "minecraft:grass_block",
+					"height": 3
+				}
+			],
+			"structure_overrides": [
+				{
+					"structures": [
+						{
+							"structure": "#minecraft:village",
+							"weight": 1
+						}
+					],
+					"placement": {
+						"type": "minecraft:random_spread",
+						"salt": 2040389587,
+						"frequency": 1,
+						"spacing": 20,
+						"separation": 19
+					}
+				}
+			]
+		}
+	}
+}

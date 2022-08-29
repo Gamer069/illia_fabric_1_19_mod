@@ -6,11 +6,13 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.CraftingInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.screen.CraftingScreenHandler;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -84,6 +86,7 @@ public class DiamondCraftingTableBlockEntity extends BlockEntity implements Name
 	}
 
 	private static void craftItem(DiamondCraftingTableBlockEntity entity) {
+		ScreenHandler handler;
 		SimpleInventory inventory = new SimpleInventory(entity.size());
 		for (int i = 0; i < entity.size(); i++) {
 			inventory.setStack(i, entity.getStack(i));

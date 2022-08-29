@@ -11,6 +11,7 @@ import net.illia.illiafabricmod1_19.networking.ModMessages;
 import net.illia.illiafabricmod1_19.recipe.ModRecipes;
 import net.illia.illiafabricmod1_19.screen.ModScreenHandlers;
 import net.illia.illiafabricmod1_19.util.ModLootTableModifiers;
+import net.illia.illiafabricmod1_19.world.dimension.ModDimensions;
 import net.illia.illiafabricmod1_19.world.feature.ModConfiguredFeatures;
 import net.illia.illiafabricmod1_19.world.gen.ModOreGeneration;
 import org.slf4j.Logger;
@@ -44,5 +45,7 @@ public class IlliaFabricMod1_19 implements ModInitializer {
 		ModScreenHandlers.registerAllScreenHandlers();
 
 		ModRecipes.registerRecipes();
+
+		ModDimensions.register();
 	}
 }
