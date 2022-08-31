@@ -15,21 +15,21 @@ import net.minecraft.screen.slot.CraftingResultSlot;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.World;
+import org.checkerframework.checker.units.qual.C;
+import org.lwjgl.system.SharedLibrary;
 
 import java.util.Optional;
 
 public class DiamondCraftingTableScreenHandler extends ScreenHandler {
-	private final Inventory inventory;
+	public static Inventory inventory;
 	private final CraftingInventory input;
 	private final CraftingResultInventory result;
 	private final PropertyDelegate delegate;
 	private final PlayerEntity player;
 
-
 	public DiamondCraftingTableScreenHandler(int syncId, PlayerInventory inventory) {
 		this(syncId, inventory, new SimpleInventory(9), new ArrayPropertyDelegate(9));
 	}
-
 	public DiamondCraftingTableScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
 		super(ModScreenHandlers.DIAMOND_CRAFTING_TABLE_SCREEN_HANDLER, syncId);
 		checkSize(inventory, 9);
@@ -115,6 +115,11 @@ public class DiamondCraftingTableScreenHandler extends ScreenHandler {
 			handler.setPreviousTrackedSlot(0, itemStack);
 			serverPlayerEntity.networkHandler.sendPacket(new ScreenHandlerSlotUpdateS2CPacket(handler.syncId, handler.nextRevision(), 0, itemStack));
 		}
+	}
+
+	@Override
+	public void onContentChanged(Inventory inventory) {
+		updateResult(this, this.player.world, this.player, this.input, this.result);
 	}
 
 	@Override

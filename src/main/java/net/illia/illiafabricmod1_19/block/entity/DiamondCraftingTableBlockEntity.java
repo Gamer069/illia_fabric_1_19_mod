@@ -12,7 +12,6 @@ import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.screen.CraftingScreenHandler;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -26,6 +25,7 @@ import java.util.Optional;
 
 public class DiamondCraftingTableBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
 	private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(9, ItemStack.EMPTY);
+	private static final ScreenHandler handler = new DiamondCraftingTableScreenHandler(0, (PlayerInventory) DiamondCraftingTableScreenHandler.inventory);
 	protected final PropertyDelegate delegate;
 
 	public DiamondCraftingTableBlockEntity(BlockPos pos, BlockState state) {
@@ -87,7 +87,7 @@ public class DiamondCraftingTableBlockEntity extends BlockEntity implements Name
 
 	private static void craftItem(DiamondCraftingTableBlockEntity entity) {
 		ScreenHandler handler;
-		SimpleInventory inventory = new SimpleInventory(entity.size());
+		CraftingInventory inventory = new CraftingInventory(DiamondCraftingTableBlockEntity.handler, entity.size(), entity.size());
 		for (int i = 0; i < entity.size(); i++) {
 			inventory.setStack(i, entity.getStack(i));
 		}
@@ -99,7 +99,7 @@ public class DiamondCraftingTableBlockEntity extends BlockEntity implements Name
 	}
 
 	private static boolean hasRecipe(DiamondCraftingTableBlockEntity entity) {
-		SimpleInventory inventory = new SimpleInventory(entity.size());
+		CraftingInventory inventory = new CraftingInventory(DiamondCraftingTableBlockEntity.handler, entity.size(), entity.size());
 		for (int i = 0; i < entity.size(); i++) {
 			inventory.setStack(i, entity.getStack(i));
 		}
@@ -108,11 +108,11 @@ public class DiamondCraftingTableBlockEntity extends BlockEntity implements Name
 			&& canInsertItemIntoOutputSlot(inventory, match.get().getOutput().getItem());
 	}
 
-	private static boolean canInsertAmountIntoOutputSlot(SimpleInventory inventory, int amount) {
+	private static boolean canInsertAmountIntoOutputSlot(CraftingInventory inventory, int amount) {
 		return inventory.getStack(2).getMaxCount() > inventory.getStack(2).getCount() + amount;
 	}
 
-	private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
+	private static boolean canInsertItemIntoOutputSlot(CraftingInventory inventory, Item output) {
 		return inventory.getStack(2).getItem() == output || inventory.getStack(2).isEmpty();
 	}
 }

@@ -25,11 +25,6 @@ public class IlliaRandomNumberGenerator extends Item {
 			outputRandomNumberChallenge(user);
 			user.getItemCooldownManager().set(this, 199);
 		}
-//		TODO = (
-//		1. outputting a random number
-//		2. saying a player that this number is dumb
-		/*3. We Are DONE!*/
-//		)
 		return super.use(world, user, hand);
 	}
 	@Override
