@@ -126,4 +126,5 @@ public class DiamondCraftingTableScreenHandler extends ScreenHandler {
 	public ScreenHandlerType<?> getType() {
 		return ModScreenHandlers.DIAMOND_CRAFTING_TABLE_SCREEN_HANDLER;
 	}
+	//NOTHING
 }
