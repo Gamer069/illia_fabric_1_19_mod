@@ -7,7 +7,7 @@
 	  "ModEntityDataSaverMixin"
   ],
   "client": [
-	  "ExampleMixin"
+	  "IlliaFabricMod1_19Mixin"
   ],
   "injectors": {
     "defaultRequire": 1

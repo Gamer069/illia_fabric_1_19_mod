@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 //This is A Mixin :)
 
 @Mixin(TitleScreen.class)
-public class ExampleMixin {
+public class IlliaFabricMod1_19Mixin {
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
 		IlliaFabricMod1_19.LOGGER.info("This line is printed by an example mod mixin!");

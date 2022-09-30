@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/leaves",
+	"textures": {
+		"all": "illiafabricmod1_19:block/test_leaves"
+	}
+}

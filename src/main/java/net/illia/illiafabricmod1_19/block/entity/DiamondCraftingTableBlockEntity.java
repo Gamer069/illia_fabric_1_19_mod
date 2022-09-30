@@ -1,6 +1,6 @@
 package net.illia.illiafabricmod1_19.block.entity;
 
-import net.illia.illiafabricmod1_19.recipe.DiamondCraftingTableRecipe;
+import net.illia.illiafabricmod1_19.item.ModItems;
 import net.illia.illiafabricmod1_19.screen.DiamondCraftingTableScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -20,8 +20,6 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.Optional;
 
 public class DiamondCraftingTableBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
 	private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(9, ItemStack.EMPTY);
@@ -91,10 +89,9 @@ public class DiamondCraftingTableBlockEntity extends BlockEntity implements Name
 		for (int i = 0; i < entity.size(); i++) {
 			inventory.setStack(i, entity.getStack(i));
 		}
-		Optional<DiamondCraftingTableRecipe> recipe = entity.getWorld().getRecipeManager().getFirstMatch(DiamondCraftingTableRecipe.Type.INSTANCE, inventory, entity.getWorld());
 		if (hasRecipe(entity)) {
 			entity.removeStack(1, 1);
-			entity.setStack(2, new ItemStack(recipe.get().getOutput().getItem(), entity.getStack(2).getCount() + 1));
+			entity.setStack(2, new ItemStack(ModItems.RUBY, entity.getStack(2).getCount() + 1));
 		}
 	}
 
@@ -103,9 +100,8 @@ public class DiamondCraftingTableBlockEntity extends BlockEntity implements Name
 		for (int i = 0; i < entity.size(); i++) {
 			inventory.setStack(i, entity.getStack(i));
 		}
-		Optional<DiamondCraftingTableRecipe> match = entity.getWorld().getRecipeManager().getFirstMatch(DiamondCraftingTableRecipe.Type.INSTANCE, inventory, entity.getWorld());
-		return match.isPresent() && canInsertAmountIntoOutputSlot(inventory, 1)
-			&& canInsertItemIntoOutputSlot(inventory, match.get().getOutput().getItem());
+		return canInsertAmountIntoOutputSlot(inventory, 1)
+			&& canInsertItemIntoOutputSlot(inventory, ModItems.RUBY);
 	}
 
 	private static boolean canInsertAmountIntoOutputSlot(CraftingInventory inventory, int amount) {

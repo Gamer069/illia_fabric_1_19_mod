@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/cube_column",
+	"textures": {
+		"end": "illiafabricmod1_19:block/test_log_top",
+		"side": "illiafabricmod1_19:block/test_log"
+	}
+}

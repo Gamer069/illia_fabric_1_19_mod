@@ -1,0 +1,95 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "parts",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "left_parts",
+					"parent": "parts",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "part2",
+					"parent": "left_parts",
+					"pivot": [-4, 0, 0],
+					"cubes": [
+						{"origin": [-9, 0, 1], "size": [3, 1, 1], "uv": [0, 12]},
+						{"origin": [-7, 0, 0], "size": [3, 1, 1], "uv": [7, 11]}
+					]
+				},
+				{
+					"name": "part3",
+					"parent": "left_parts",
+					"pivot": [-8, 0, 0],
+					"cubes": [
+						{"origin": [-13, 0, 1], "size": [3, 1, 1], "uv": [0, 10]},
+						{"origin": [-11, 0, 0], "size": [3, 1, 1], "uv": [7, 9]}
+					]
+				},
+				{
+					"name": "part4",
+					"parent": "left_parts",
+					"pivot": [-12, 0, 0],
+					"cubes": [
+						{"origin": [-17, 0, 1], "size": [3, 1, 1], "uv": [0, 8]},
+						{"origin": [-15, 0, 0], "size": [3, 1, 1], "uv": [7, 7]}
+					]
+				},
+				{
+					"name": "part5",
+					"parent": "left_parts",
+					"pivot": [4, 0, 0],
+					"cubes": [
+						{"origin": [-1, 0, 1], "size": [3, 1, 1], "uv": [7, 5]},
+						{"origin": [1, 0, 0], "size": [3, 1, 1], "uv": [7, 3]}
+					]
+				},
+				{
+					"name": "part",
+					"parent": "left_parts",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-5, 0, 1], "size": [3, 1, 1], "uv": [7, 13]},
+						{"origin": [-3, 0, 0], "size": [3, 1, 1], "uv": [0, 14]}
+					]
+				},
+				{
+					"name": "right_parts",
+					"parent": "parts",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "part6",
+					"parent": "right_parts",
+					"pivot": [8, 0, 0],
+					"cubes": [
+						{"origin": [3, 0, 1], "size": [3, 1, 1], "uv": [7, 1]}
+					]
+				},
+				{
+					"name": "part7",
+					"parent": "right_parts",
+					"pivot": [12, 0, 0],
+					"cubes": [
+						{"origin": [7, 0, 1], "size": [3, 1, 1], "uv": [0, 4]},
+						{"origin": [9, 0, 0], "size": [3, 1, 1], "uv": [0, 2]},
+						{"origin": [11, 0, 1], "size": [3, 1, 1], "uv": [0, 0]},
+						{"origin": [5, 0, 0], "size": [3, 1, 1], "uv": [0, 6]}
+					]
+				}
+			]
+		}
+	]
+}

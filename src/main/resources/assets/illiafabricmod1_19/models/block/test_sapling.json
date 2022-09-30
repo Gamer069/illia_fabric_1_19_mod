@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/cross",
+	"textures": {
+		"cross": "illiafabricmod1_19:block/test_sapling"
+	}
+}

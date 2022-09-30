@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"illiafabricmod1_19:test_log",
+		"illiafabricmod1_19:test_wood",
+		"illiafabricmod1_19:stripped_test_wood",
+		"illiafabricmod1_19:stripped_test_log"
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"axis=s": {
+			"model": "illiafabricmod1_19:block/stripped_test_log_horizontal",
+			"x": 90,
+			"y": 90
+		},
+		"axis=y": {
+			"model": "illiafabricmod1_19:block/stripped_test_log"
+		},
+		"axis=z": {
+			"model": "illiafabricmod1_19:block/stripped_test_log_horizontal",
+			"x": 90
+		}
+	}
+}

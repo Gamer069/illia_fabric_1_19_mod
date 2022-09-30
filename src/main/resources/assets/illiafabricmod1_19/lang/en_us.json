@@ -10,6 +10,13 @@
 	"block.illiafabricmod1_19.still_melted_ruby": "Still Melted Ruby",
 	"block.illiafabricmod1_19.flowing_melted_ruby": "Flowing Melted Ruby",
 	"block.illiafabricmod1_19.diamond_crafting_table": "Diamond Crafting Table",
+	"block.illiafabricmod1_19.test_wood": "Test Wood",
+	"block.illiafabricmod1_19.test_log": "Test Log",
+	"block.illiafabricmod1_19.test_planks": "Test Planks",
+	"block.illiafabricmod1_19.test_leaves": "Test Leaves",
+	"block.illiafabricmod1_19.test_sapling": "Test Sapling",
+	"block.illiafabricmod1_19.stripped_test_log": "Stripped Test Log",
+	"block.illiafabricmod1_19.stripped_test_wood": "Stripped Test Wood",
 
 	"item.illiafabricmod1_19.melted_ruby_bucket": "Melted Ruby Bucket",
 
@@ -25,5 +32,7 @@
 	"message.illiafabricmod_1_19.drank_water": "Did You Drink That Water?",
 	"message.illiafabricmod_1_19.error": "FATAL ERROR",
 
-	"container.diamond_crafting": "Diamond Crafting"
+	"container.diamond_crafting": "Diamond Crafting",
+
+	"entity.illiafabricmod1_19.snake": "Snake"
 }
